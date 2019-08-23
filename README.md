@@ -7,6 +7,7 @@ A simple Action to basically push a generated docs commit to your PR branch pull
 ## Book Keeping
 
 [Code of Conduct](docs/CODE_OF_CONDUCT.md)
+
 [License](docs/LICENSE)
 
 ## Installation
