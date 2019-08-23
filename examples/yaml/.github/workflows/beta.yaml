@@ -1,0 +1,15 @@
+---
+name: terraform-docs-as-code
+on: pull_request
+jobs:
+  generate_docs:
+    steps:
+      - name: Generate Docs
+        uses: docker://erinatkinson/terraform-docs-as-code:latest
+        env:
+          DEPLOY_EMAIL: public+githubEmail@github.com
+          DEPLOY_NAME: Deployer
+          MODULE_VARS_CONF_PATH: "terraform/variables.tf"
+          MODULE_OUTPUTS_CONF_PATH: "terraform/outputs.tf"
+          MODULE_NAME: Terraform Module Name
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
